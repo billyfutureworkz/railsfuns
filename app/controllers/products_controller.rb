@@ -14,8 +14,10 @@ class ProductsController < ApplicationController
 	def create
 	  @product = Product.new(product_params)	
 	  if @product.save
+      flash[:notice] = "you have successfully created product"
 	    redirect_to products_url
 	  else
+      flash.now[:notice] = "there is an error in your form"
 	  	render :new  
 	  end
 	end
