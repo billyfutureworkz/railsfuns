@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'formtastic', '~> 3.0'
 gem 'enumerize'
 gem 'countries'
 
