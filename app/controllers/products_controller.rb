@@ -10,6 +10,19 @@ class ProductsController < ApplicationController
 	def new
 	  @product = Product.new	
 	end
+  
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    if @product.update_attributes(product_params)
+      # Handle a successful update.
+    else
+      render 'edit'
+    end
+  end
 
 	def create
 	  @product = Product.new(product_params)	
