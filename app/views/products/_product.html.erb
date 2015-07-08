@@ -1,0 +1,5 @@
+<tr>
+  <td><%= link_to product.category.title, product_path(product) %></td>                   
+  <td><%= product.price %><td>
+  <td><%= link_to 'Delete', product_path(product), method: :delete, data: {confirm: 'Are you sure u want to delete this product?'} %></td>                   
+</tr>
